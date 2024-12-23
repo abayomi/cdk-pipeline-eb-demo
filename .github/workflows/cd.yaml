@@ -24,6 +24,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      # Run npm ci in the src directory
+      - name: Install dependencies in src directory
+        working-directory: ./src
+        run: npm ci
+
       - name: Build CDK Stack
         run: npm run build
 
